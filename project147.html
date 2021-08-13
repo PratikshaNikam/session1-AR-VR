@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: green ">
+
+    <a-sky src="https://miro.medium.com/max/1400/1*YzJjpXizJpfEIXP48rFSzw.jpeg">
+    </a-sky>
+     <!--sound-->
+    <a-entity
+        sound="src: https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Ffh_space_discovery_-_earth_proud_music_preview(1).mp3?v=1604306441093; autoplay: true; volume: 1">
+    </a-entity>
+   
+        <!--Camera-->
+        <a-entity position="0 0 15">
+            <a-camera></a-camera>
+        </a-entity>
+  
+        <a-torus src="https://images.freecreatives.com/wp-content/uploads/2016/07/Sparkling-Stars-Texture-On-Grey-Background.png" position ="-25 -4 -6" rotation="90 -90 0" radius="3" radius-tubular="0.3" segments-tubular="1000"></a-torus>
+
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property:position ;   from:-0.5 0 0 -0.1;to: 0.5 0 0;   loop: true;  dir:alternate; dur: 3000;"   >
+            <a-sphere position="0 1 0"  src="data:image/jpeg;base64,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" radius="3"></a-sphere>
+        </a-entity>
+        
+         <a-entity>
+            <a-sphere position="0 6 0" src="data:image/jpeg;base64,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" radius="2"></a-sphere>
+        </a-entity>
+
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property:position ;   from:-0.5 0 0 -0.1;to: 0.5 0 0;   loop: true;  dir:alternate; dur: 3000;"   >
+            <a-sphere position="-1 6 2"  color="black" radius="0.2"></a-sphere>
+        </a-entity>
+
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property:position ;   from:-0.5 0 0 -0.1;to: 0.5 0 0;   loop: true;  dir:alternate; dur: 3000;"   >
+
+            <a-sphere position="1 6 2"  color="black" radius="0.2"></a-sphere>
+        </a-entity>
+
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property:position ;   from:-0.5 0 0 -0.1;to: 0.5 0 0;   loop: true;  dir:alternate; dur: 3000;"   >
+            <a-cone color="tomato" radius-bottom="0" radius-top="0.5" height="1.5" position="0 4.5 2"></a-cone>
+        </a-entity>
+</body>
+</html>
